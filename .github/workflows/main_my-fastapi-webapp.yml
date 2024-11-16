@@ -74,7 +74,7 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'my-fastapi-webapp'
-          slot-name: 'Production'
+          slot-name: ''
       - name: Set startup command for Azure App Service
         run: |
           az webapp config set --resource-group my-fastapi-rg --name my-fastapi-webapp --startup-file "uvicorn main:app --host 0.0.0.0 --port 80"
